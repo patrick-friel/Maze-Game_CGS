@@ -1,9 +1,9 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio Version 16
-VisualStudioVersion = 16.0.33529.622
+# Visual Studio Version 17
+VisualStudioVersion = 17.6.33712.159
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Section 06 - Game with Key and Trap", "Section 06 - Game with Key and Trap.vcxproj", "{549E43B5-CE43-47BF-869D-9EECE78ACBAF}"
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Project", "Project\MazeGame.vcxproj", "{549E43B5-CE43-47BF-869D-9EECE78ACBAF}"
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "LevelEditor", "LevelEditor\LevelEditor.vcxproj", "{2BBD8FA6-12DA-4894-9C2D-D2F02D06AC39}"
 EndProject
@@ -36,6 +36,6 @@ Global
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
-		SolutionGuid = {3DEEC4D4-30A3-4181-8F97-561D8B6D62DB}
+		SolutionGuid = {6CA3A086-7207-4CAD-A6E6-BE6FCF3511EA}
 	EndGlobalSection
 EndGlobal
