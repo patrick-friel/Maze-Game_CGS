@@ -1,8 +1,10 @@
 // Section 06 - Game with Key and Trap.cpp : This file contains the 'main' function. Program execution begins and ends there.
 //
 
+//#include "vld.h"
 #include <iostream>
 #include "Game.h"
+#include "AudioManager.h"
 //#include <time.h>
 //#include <chrono>
 //#include <thread>
@@ -38,17 +40,21 @@ int main()
         else if (myGame.GetPlayerLives() < 0)
         {
             cout << "YOU LOSE!" << endl;
+            AudioManager::GetInstance()->PlayLoseSound();
         }
         else
         {
             cout << "YOU WIN" << endl;
+            AudioManager::GetInstance()->PlayWinSound();
         }
     }
     else
     {
         cout << "Game did not load!";
     }
+    AudioManager::DestroyInstance();
 
+    return 0;
 }
 
 //void PlayLevel(string level, int& width, int& height)
@@ -107,29 +113,3 @@ int main()
 //    delete[] levelArray;
 //}
 //
-
-
-//void PlayDoorClosedSound()
-//{
-//    Beep(500, 75);
-//    Beep(500, 75);
-//}
-//void PlayDoorOpenSound()
-//{
-//    Beep(1397, 200);
-//}
-//void PlayKeyPickupSound()
-//{
-//    Beep(1568, 200);
-//}
-//void PlayWinSound()
-//{
-//    Beep(1568, 200);
-//    Beep(1568, 200);
-//    Beep(1568, 200);
-//    Beep(1245, 200);
-//    Beep(1397, 200);
-//    Beep(1397, 200);
-//    Beep(1397, 200);
-//    Beep(1175, 200);
-//}
