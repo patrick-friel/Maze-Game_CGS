@@ -12,7 +12,7 @@
 
 using namespace std;
 
-constexpr char WAL = (char)219;
+
 //constexpr char KEY = (char)232;
 //constexpr char DOR = (char)179;
 //constexpr char GOL = (char)36;
@@ -41,7 +41,7 @@ Level::~Level()
 
 bool Level::Load(std::string levelName, int* playerX, int* playerY)
 {
-    //levelName.insert(0, "../");
+    levelName.insert(0, "../");
     ifstream levelFile;
     levelFile.open(levelName);
     if (!levelFile)
