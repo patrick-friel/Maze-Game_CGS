@@ -1,8 +1,10 @@
 #include "GameplayState.h"
+
 #include <iostream>
 #include <conio.h>
-
+#include <windows.h>
 #include <assert.h>
+#include <thread>
 
 #include "Enemy.h"
 #include "Key.h"
@@ -22,6 +24,8 @@ constexpr int kUpArrow = 72;
 constexpr int kDownArrow = 80;
 constexpr int kEscapeKey = 27;
 
+constexpr unsigned int SleepTime = 101;
+
 GameplayState::GameplayState(StateMachineExampleGame* pOwner)
 	: m_pOwner(pOwner)
 	, m_beatLevel(false)
@@ -33,6 +37,8 @@ GameplayState::GameplayState(StateMachineExampleGame* pOwner)
     m_LevelNames.push_back("Level1.txt");
     m_LevelNames.push_back("Level2.txt");
     m_LevelNames.push_back("Level3.txt");
+
+    m_inputThread = new std::thread(&GameplayState::ProcessInput, this);
 }
 
 GameplayState::~GameplayState()
@@ -111,7 +117,8 @@ bool GameplayState::Update(bool processInput)
         else
         {
             HandleCollision(newPlayerX, newPlayerY);
-        }               
+        }
+        this_thread::sleep_for(chrono::milliseconds(SleepTime));
     }
 
     if (m_beatLevel)
