@@ -38,7 +38,7 @@ GameplayState::GameplayState(StateMachineExampleGame* pOwner)
     m_LevelNames.push_back("Level2.txt");
     m_LevelNames.push_back("Level3.txt");
 
-    m_inputThread = new std::thread(&GameplayState::ProcessInput, this);
+    //m_inputThread = new std::thread(&GameplayState::ProcessInput, this);
 }
 
 GameplayState::~GameplayState()
@@ -118,7 +118,7 @@ bool GameplayState::Update(bool processInput)
         {
             HandleCollision(newPlayerX, newPlayerY);
         }
-        this_thread::sleep_for(chrono::milliseconds(SleepTime));
+        //this_thread::sleep_for(chrono::milliseconds(SleepTime));
     }
 
     if (m_beatLevel)

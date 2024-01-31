@@ -38,11 +38,11 @@ private:
 	void DrawHUD(const HANDLE& console);
 
 protected:
-	void ProcessInput() override;
-	void CheckBeatLevel();
+	//void ProcessInput() override;
+	//void CheckBeatLevel();
 
-	bool m_shouldProcessInput = false;
-	std::thread* m_inputThread = nullptr;
+	//bool m_shouldProcessInput = false;
+	//std::thread* m_inputThread = nullptr;
 
 };
 
